@@ -76,10 +76,8 @@ class NewProductForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    const product = this.state;
     const { saveNewProduct } = this.props;
-    const newProduct = addProductDetails(product);
-    saveNewProduct(newProduct);
+    saveNewProduct(addProductDetails(this.state));
   }
 
   // handleChange(event) {
